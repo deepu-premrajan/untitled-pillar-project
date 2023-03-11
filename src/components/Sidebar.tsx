@@ -18,25 +18,31 @@ export default function Sidebar() {
     >
       <Stack spacing="3">
         <Link
+          href="/login"
+          onClick={() => handleSidebarClick("/login")}
+        >
+          Login
+        </Link>
+        <Link
           href="/dashboard"
           onClick={() => handleSidebarClick("/dashboard")}
         >
           Dashboard
         </Link>
         <Link
-          href="/dashboard"
+          href="/migrate"
           onClick={() => handleSidebarClick("/migrate")}
         >
           Migrate
         </Link>
         <Link
-          href="/dashboard"
+          href="/profile"
           onClick={() => handleSidebarClick("/profile")}
         >
           Profile
         </Link>
         <Link
-          href="/dashboard"
+          href="/sports"
           onClick={() => handleSidebarClick("/sports")}
         >
           Sports
