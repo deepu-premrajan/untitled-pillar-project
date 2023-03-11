@@ -1,30 +1,33 @@
 import Link from "next/link";
 import Head from "next/head";
+import { ChakraProvider, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>BrightUI</title>
-      </Head>
+    <ChakraProvider>
+      <>
+        <Head>
+          <title>BrightUI</title>
+        </Head>
 
-      <h1 className="title">Welcome to BrightUI</h1>
+        <Text fontSize="5xl">Welcome to BrightUI</Text>
 
-      <h2>
-        <Link href="/dashboard">Dashboard</Link>
-      </h2>
+        <Text>
+          <Link href="/dashboard">Dashboard</Link>
+        </Text>
 
-      <h2>
-        <Link href="/migrate">Migrate</Link>
-      </h2>
+        <Text>
+          <Link href="/migrate">Migrate</Link>
+        </Text>
 
-      <h2>
-        <Link href="/profile">Profile</Link>
-      </h2>
+        <Text>
+          <Link href="/profile">Profile</Link>
+        </Text>
 
-      <h2>
-        <Link href="/sports">Sports</Link>
-      </h2>
-    </>
+        <Text>
+          <Link href="/sports">Sports</Link>
+        </Text>
+      </>
+    </ChakraProvider>
   );
 }
