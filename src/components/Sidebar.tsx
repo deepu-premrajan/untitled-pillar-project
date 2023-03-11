@@ -18,6 +18,12 @@ export default function Sidebar() {
     >
       <Stack spacing="3">
         <Link
+          href="/"
+          onClick={() => handleSidebarClick("/")}
+        >
+          Home
+        </Link>
+        <Link
           href="/login"
           onClick={() => handleSidebarClick("/login")}
         >
