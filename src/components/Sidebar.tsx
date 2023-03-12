@@ -1,14 +1,7 @@
 import { Box, Stack } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function Sidebar() {
-  const router = useRouter();
-
-  const handleSidebarClick = (path: string) => {
-    router.push(path);
-  };
-
   return (
     <Box
       w="65"
@@ -17,42 +10,10 @@ export default function Sidebar() {
       pb="20"
     >
       <Stack spacing="3">
-        <Link
-          href="/"
-          onClick={() => handleSidebarClick("/")}
-        >
-          Home
-        </Link>
-        <Link
-          href="/login"
-          onClick={() => handleSidebarClick("/login")}
-        >
-          Login
-        </Link>
-        <Link
-          href="/dashboard"
-          onClick={() => handleSidebarClick("/dashboard")}
-        >
-          Dashboard
-        </Link>
-        <Link
-          href="/migrate"
-          onClick={() => handleSidebarClick("/migrate")}
-        >
-          Migrate
-        </Link>
-        <Link
-          href="/profile"
-          onClick={() => handleSidebarClick("/profile")}
-        >
-          Profile
-        </Link>
-        <Link
-          href="/sports"
-          onClick={() => handleSidebarClick("/sports")}
-        >
-          Sports
-        </Link>
+        <Link href="/dashboard">Dashboard</Link>
+        <Link href="/migrate">Migrate</Link>
+        <Link href="/profile">Profile</Link>
+        <Link href="/sports">Sports</Link>
       </Stack>
     </Box>
   );
