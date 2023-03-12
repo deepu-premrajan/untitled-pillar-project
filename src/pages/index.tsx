@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Text } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -9,6 +9,10 @@ export default function Home() {
       </Head>
       <Text fontSize="5xl">Welcome to BrightUI</Text>
       <Text>This is the homepage</Text>
+      <Button>Login</Button>
     </>
   );
-}
+};
+
+Home.isHome = true;
+export default Home;
